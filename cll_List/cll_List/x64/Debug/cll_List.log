@@ -1,0 +1,33 @@
+﻿  Source.cpp
+C:\Users\Baxeo\source\repos\cll_List\cll_List\ClassList.h(186,22): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\Baxeo\source\repos\cll_List\cll_List\ClassList.h(178): message : во время компиляции функции-члена класс шаблон "void Lst::cll_List<int>::show_all(void)"
+C:\Users\Baxeo\source\repos\cll_List\cll_List\Source.cpp(34): message : выполняется компиляция ссылки на экземпляр шаблон функции "void Lst::cll_List<int>::show_all(void)"
+C:\Users\Baxeo\source\repos\cll_List\cll_List\Source.cpp(28): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "Lst::cll_List<int>"
+C:\Users\Baxeo\source\repos\cll_List\cll_List\ClassList.h(223,21): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\Baxeo\source\repos\cll_List\cll_List\ClassList.h(222): message : во время компиляции функции-члена класс шаблон "void Lst::cll_List<int>::random_fill(const unsigned int)"
+C:\Users\Baxeo\source\repos\cll_List\cll_List\Source.cpp(30): message : выполняется компиляция ссылки на экземпляр шаблон функции "void Lst::cll_List<int>::random_fill(const unsigned int)"
+C:\Users\Baxeo\source\repos\cll_List\cll_List\ClassList.h(275,13): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\Baxeo\source\repos\cll_List\cll_List\ClassList.h(271): message : во время компиляции функции-члена класс шаблон "T &Lst::cll_List<T>::operator [](const int)"
+          with
+          [
+              T=int
+          ]
+C:\Users\Baxeo\source\repos\cll_List\cll_List\Source.cpp(35): message : выполняется компиляция ссылки на экземпляр шаблон функции "T &Lst::cll_List<T>::operator [](const int)"
+          with
+          [
+              T=int
+          ]
+C:\Users\Baxeo\source\repos\cll_List\cll_List\ClassList.h(307,14): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\Baxeo\source\repos\cll_List\cll_List\ClassList.h(303): message : во время компиляции функции-члена класс шаблон "Lst::cll_List<int>::Node<T> *Lst::cll_List<T>::search_needed_node(const int)"
+          with
+          [
+              T=int
+          ]
+C:\Users\Baxeo\source\repos\cll_List\cll_List\ClassList.h(260): message : выполняется компиляция ссылки на экземпляр шаблон функции "Lst::cll_List<int>::Node<T> *Lst::cll_List<T>::search_needed_node(const int)"
+          with
+          [
+              T=int
+          ]
+C:\Users\Baxeo\source\repos\cll_List\cll_List\ClassList.h(64): message : во время компиляции функции-члена класс шаблон "Lst::cll_List<int>::cll_List(void)"
+C:\Users\Baxeo\source\repos\cll_List\cll_List\Source.cpp(28): message : выполняется компиляция ссылки на экземпляр шаблон функции "Lst::cll_List<int>::cll_List(void)"
+  cll_List.vcxproj -> C:\Users\Baxeo\source\repos\cll_List\x64\Debug\cll_List.exe
