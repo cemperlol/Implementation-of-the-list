@@ -61,8 +61,8 @@ namespace Lst
 		Node<T>* Tail;
 
 		Node<T>* search_needed_node(const unsigned int index);
-		void exchange_chosen_nodes(int& FirstData, int& SecondData);
-
+		void exchange_chosen_nodes(T& FirstData, T& SecondData);
+		std::string create_random_string();
 	};
 
 	template<typename T>
@@ -228,7 +228,15 @@ namespace Lst
 	{
 		for (int i = 0; i < quantity; i++)
 		{
-			push_back((T)rand()%10);
+			push_back((T)rand());
+		}
+	}
+
+	void cll_List<std::string>::random_fill(const unsigned int& quantity)
+	{
+		for (int i = 0; i < quantity; i++)
+		{			
+			push_back(create_random_string());
 		}
 	}
 
@@ -273,7 +281,7 @@ namespace Lst
 	void cll_List<T>::sort(bool ReverseMode)
 	{
 		bool Unsorted;
-		T Temp = 0;
+		T Temp;
 		Node<T>* FirstNode;
 
 
@@ -285,6 +293,39 @@ namespace Lst
 			while (FirstNode->pNext != nullptr)
 			{
 				if (FirstNode->data > FirstNode->pNext->data)
+				{
+					Temp = FirstNode->data;
+					FirstNode->data = FirstNode->pNext->data;
+					FirstNode->pNext->data = Temp;
+
+					Unsorted = true;
+				}
+
+				FirstNode = FirstNode->pNext;
+			}
+		} while (Unsorted);
+
+		if (ReverseMode)
+		{
+			reverse();
+		}
+	}
+
+	void cll_List<std::string>::sort(bool ReverseMode)
+	{
+		bool Unsorted;
+		std::string Temp;
+		Node<std::string>* FirstNode;
+
+
+		do
+		{
+			Unsorted = false;
+			FirstNode = Head;
+
+			while (FirstNode->pNext != nullptr)
+			{
+				if ((int)FirstNode->data[0] > (int)FirstNode->pNext->data[0])
 				{
 					Temp = FirstNode->data;
 					FirstNode->data = FirstNode->pNext->data;
@@ -454,10 +495,23 @@ namespace Lst
 	}
 
 	template<typename T>
-	void cll_List<T>::exchange_chosen_nodes(int& FirstData, int& SecondData)
+	void cll_List<T>::exchange_chosen_nodes(T& FirstData, T& SecondData)
 	{
-		int TempData = FirstData;
+		T TempData = FirstData;
 		FirstData = SecondData;
 		SecondData = TempData;
+	}
+
+	template<typename T>
+	std::string cll_List<T>::create_random_string()
+	{
+		std::string CreatedString = "";
+
+		for (int i = 0; i < rand() % 100; i++)
+		{
+			CreatedString += (char)(rand()%256);
+		}
+
+		return CreatedString;
 	}
 }
